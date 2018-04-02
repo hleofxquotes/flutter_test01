@@ -9,3 +9,6 @@ build/
 ios/.generated/
 packages
 .flutter-plugins
+lib/github_repo.g.dart
+lib/user.g.dart
+
