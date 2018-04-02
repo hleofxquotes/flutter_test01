@@ -28,13 +28,3 @@ class GithubRepo extends Object with _$GithubRepoSerializerMixin {
   factory GithubRepo.fromJson(Map<String, dynamic> json) =>
       _$GithubRepoFromJson(json);
 }
-
-@JsonSerializable()
-class GithubRepos extends Object with _$GithubReposSerializerMixin {
-  GithubRepos(this.repos);
-
-  final List<GithubRepo> repos;
-
-  factory GithubRepos.fromJson(Map<String, dynamic> json) =>
-      _$GithubReposFromJson(json);
-}
