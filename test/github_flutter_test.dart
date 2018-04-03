@@ -32,7 +32,7 @@ void main() {
     var response = await http.get(url);
     expect(response.statusCode, equals(200));
 
-    const JsonCodec json = const JsonCodec();
+//    const JsonCodec json = const JsonCodec();
     var repoMaps = json.decode(response.body);
     List<GithubRepo> repos = repoMaps.map((repoMap) {
       return new GithubRepo.fromJson(repoMap);

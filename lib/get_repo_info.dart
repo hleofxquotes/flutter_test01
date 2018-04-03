@@ -6,13 +6,11 @@ main() async {
   var response =
       await http.get(url, headers: {'User-Agent': 'Dart/1.0 (My Dart client)'});
 
-  List<String> repos = JSON.decode(response.body);
+  List<Map<String, dynamic>> repos = json.decode(response.body);
   var heading = 'Repository | Star count  | Fork count';
   print(heading);
   print(new List.filled(heading.length, '=').join());
   for (var repo in repos) {
-    print("${repo['name']} | "
-        "${repo['stargazers_count']} | "
-        "${repo['forks_count']}");
+    print(repo['name']);
   }
 }
